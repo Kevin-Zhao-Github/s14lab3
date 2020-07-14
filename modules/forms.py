@@ -11,7 +11,7 @@ class UserForm(FlaskForm):
 
 class DeleteForm(FlaskForm):
     id = IntegerField('id', validators=[DataRequired()])
-    submit = SubmitField('Delete User', render_kw={"onclick": "confirm('You are about to delete this user.')"}) #Lmao doesn't actually work
+    submit = SubmitField('Delete User', render_kw={"onclick": "confirm('You are about to delete this user.')"})
 
 
 class UpdateForm(FlaskForm):

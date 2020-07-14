@@ -11,7 +11,7 @@ heroku = Heroku(app)
 
 import os
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('postgres://gzbbouniaaflro:785ca9a2d0789f88cf7b459d52a1b48ce564dd352b323ede2af1f0867aaa58ef@ec2-34-239-241-25.compute-1.amazonaws.com:5432/daml1qrphou2kg')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get('DATABASE_URL')
 
 #app = Flask(__name__)
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://localhost/usersdb'

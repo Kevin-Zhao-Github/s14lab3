@@ -1,0 +1,16 @@
+<h1>Create users:</h1>
+<form class="create-form" method="POST" action="/createusers">
+    {{ form.hidden_tag() }}
+    <div class="create-form-group">
+        {{ form.n.label }}:
+        {{ form.n }}
+        {% if form.n.errors %}
+            {% for error in form.n.errors %}
+                <p class="create-error-message">{{ error }}</p>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <div class="create-form-submit">
+        {{ form.submit }}
+    </div>
+</form>

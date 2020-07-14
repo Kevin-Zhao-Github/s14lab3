@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" /> 
+        <meta http-equiv="Expires" content="0" />
+        <title>Lab 2</title>
+
+        <!-- Styles -->
+        <link href="{{ url_for('static', filename='css/index.css') }}" rel="stylesheet">
+
+    </head>
+    <body>
+        <table style="width:500px">
+            <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Age</th>
+            </tr>
+            {% for user in users %}
+            <tr>
+                <td>{{user.user_id}}</td>
+                <td>{{user.first_name}}</td>
+                <td>{{user.age}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
